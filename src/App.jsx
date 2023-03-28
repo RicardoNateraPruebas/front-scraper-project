@@ -15,7 +15,7 @@ function App() {
       const divElement = loading.current;
       console.log(divElement.innerText);
       loading.current.innerText="Loading"
-      const result = await axios.post("http://localhost:3000/", data);
+      const result = await axios.post("https://market-scraper-server.vercel.app/", data);
       if(result.data){
         const response = result.data.array
         setProducts(response);
